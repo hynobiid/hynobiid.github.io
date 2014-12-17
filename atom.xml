@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Harry's Personal Blog]]></title>
   <link href="http://hynobiid.github.io/atom.xml" rel="self"/>
   <link href="http://hynobiid.github.io/"/>
-  <updated>2014-12-17T14:48:46+02:00</updated>
+  <updated>2014-12-17T15:32:54+02:00</updated>
   <id>http://hynobiid.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Harry Lee]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
