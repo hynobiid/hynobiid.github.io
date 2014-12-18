@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Harry's Personal Blog]]></title>
+  <title><![CDATA[Harry's Personal Website]]></title>
   <link href="http://hynobiid.github.io/atom.xml" rel="self"/>
   <link href="http://hynobiid.github.io/"/>
-  <updated>2014-12-17T16:11:54+02:00</updated>
+  <updated>2014-12-18T19:49:06+02:00</updated>
   <id>http://hynobiid.github.io/</id>
   <author>
     <name><![CDATA[Harry Lee]]></name>

@@ -28,7 +28,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
 var width = 960,
-    height = 600;
+    height = 500;
 
 var fill = d3.scale.category10();
 
