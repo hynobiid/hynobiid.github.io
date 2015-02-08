@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Harry's Personal Website]]></title>
-  <link href="http://hynobiid.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: ubuntu | Harry's Personal Website]]></title>
+  <link href="http://hynobiid.github.io/blog/categories/ubuntu/atom.xml" rel="self"/>
   <link href="http://hynobiid.github.io/"/>
   <updated>2015-02-08T20:58:41+02:00</updated>
   <id>http://hynobiid.github.io/</id>

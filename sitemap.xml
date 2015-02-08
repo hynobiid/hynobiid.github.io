@@ -1,38 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://hynobiid.github.io/blog/2015/02/08/ubuntu-suspend-and-reboot-at-specific-times-using-cron/</loc>
+    <lastmod>2015-02-08T20:13:47+02:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://hynobiid.github.io/blog/2015/01/10/ubuntu-sharing-externally-connected-drives-over-network/</loc>
+    <lastmod>2015-01-10T14:29:59+02:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://hynobiid.github.io/blog/</loc>
-    <lastmod>2014-12-24T11:37:51+02:00</lastmod>
+    <lastmod>2015-02-08T20:58:41+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://hynobiid.github.io/archives/</loc>
-    <lastmod>2014-12-24T11:37:51+02:00</lastmod>
+    <lastmod>2015-02-08T20:58:41+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://hynobiid.github.io/</loc>
-    <lastmod>2014-12-24T11:37:51+02:00</lastmod>
+    <lastmod>2015-02-08T20:58:41+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://hynobiid.github.io/blog/archives/</loc>
-    <lastmod>2014-12-24T11:37:51+02:00</lastmod>
+    <lastmod>2015-02-08T20:58:41+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://hynobiid.github.io/cv/</loc>
-    <lastmod>2014-12-24T11:37:51+02:00</lastmod>
+    <lastmod>2015-02-08T20:58:41+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://hynobiid.github.io/about/</loc>
-    <lastmod>2014-12-24T11:37:51+02:00</lastmod>
+    <lastmod>2015-02-08T20:58:41+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

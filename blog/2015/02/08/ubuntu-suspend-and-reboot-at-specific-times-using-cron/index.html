@@ -5,7 +5,7 @@
 	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
 	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<meta charset="utf-8">
-	<title>Harry&#8217; Personal Website  | Harry&#8217;s Personal Website</title>
+	<title>Ubuntu: Suspend and reboot at specific times using Cron  | Harry&#8217;s Personal Website</title>
 
 <meta name="author" content="Harry Lee">
 
@@ -117,20 +117,9 @@ text {
 
 </header>
 
-	<div id="content" class="inner"><div id ="placehold"><script src="/javascripts/home_node.js"></script></div>
-
-
-
-
-<article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2015/02/08/ubuntu-suspend-and-reboot-at-specific-times-using-cron/">
-		
-			Ubuntu: Suspend and Reboot at Specific Times Using Cron</a>
-	</h2>
-	<div class="entry-content">
-		<h1>Introduction</h1>
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Ubuntu: Suspend and Reboot at Specific Times Using Cron</h2>
+	<div class="entry-content"><h1>Introduction</h1>
 
 <p>If you have a server at home and you want it to be on only during specific times and not 24/7, this script is for you.<br>
 Cron not only is the best tool for this, it also handles scheduled tasks. From the <a href="https://help.ubuntu.com/community/CronHowto">Ubuntu documentation</a>:</p>
@@ -213,10 +202,7 @@ Cron not only is the best tool for this, it also handles scheduled tasks. From t
 <p>This basically tells the server to execute the suspend script at <em>2:00 AM</em>. The <em>09:00</em> appended at the end of the line tells the server to wake up at <em>9:00 AM</em>. The details are all explained in the script.</p></li>
 <li><p>Save the crontab file and reboot.</p></li>
 </ol>
-
-		
-		
-	</div>
+</div>
 
 
 <div class="meta">
@@ -245,82 +231,19 @@ Cron not only is the best tool for this, it also handles scheduled tasks. From t
 	
 </div></article>
 
-
-<article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2015/01/10/ubuntu-sharing-externally-connected-drives-over-network/">
-		
-			Ubuntu: Sharing Externally Connected Drives Over Network</a>
-	</h2>
-	<div class="entry-content">
-		<h1>Introduction</h1>
-
-<p>When you have external drives connected to the server, it would be very useful if you can share these drives to users accessing the server as well.</p>
-
-<p>This post aims to share drives that are NTFS formatted and changing the permissions of the mounted drives.</p>
-
-<h2>Method</h2>
-
-<ol>
-<li><p>Unmount the drive that is connected already and remount to another folder giving permissions to users.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">sudo umount -l /dev/sdX1
-</code></pre></div>
-<p>Where sdX1 is the device ID.</p>
-
-<p>To check the device ID:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">df
-</code></pre></div>
-<p>or</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">lsblk
-</code></pre></div>
-<p>Remount to another folder.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">sudo mount -t ntfs-3g -o rw /dev/sdX1 /media/path/to/folder
-</code></pre></div>
-<p>This assumes that you are connecting a NTFS formatted drive.</p></li>
-<li><p>Change the permission of the mount point to allow access to users.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">sudo chown -R $USER:$USER /media/path/to/folder
-</code></pre></div>
-<p>This gives permission, both read and write, to any user that accesses the drive. You can adjust this accordingly.</p></li>
-</ol>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-01-10T14:29:59+02:00" pubdate data-updated="true"></time></div>
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
 	
-
-<div class="tags">
-
-	<a class='category' href='/blog/categories/terminal/'>terminal</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
-
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+<!---	<a class="addthis_counter addthis_pill_style"></a> &#8212;>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
 </div>
 
 
-	
-</div></article>
-
-
-<nav id="pagenavi">
-    
-    
-    <div class="center"><a href="/archives">Blog Archives</a></div>
-</nav>
 </div>
 	<footer id="footer" class="inner">Copyright &copy; 2015
 

@@ -5,12 +5,11 @@
 	<script data-cfasync="false" type="text/javascript" src="//use.typekit.net/axj3cfp.js"></script>
 	<script data-cfasync="false" type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<meta charset="utf-8">
-	<title>Harry&#8217; Personal Website  | Harry&#8217;s Personal Website</title>
+	<title>Ubuntu: Sharing externally connected drives over network  | Harry&#8217;s Personal Website</title>
 
 <meta name="author" content="Harry Lee">
 
-<meta name="description" content="Introduction If you have a server at home and you want it to be on only during specific times and not 24/7, this script is for you.
-Cron not only is &hellip;"> <meta name="keywords" content="">
+<meta name="description" content="Introduction When you have external drives connected to the server, it would be very useful if you can share these drives to users accessing the &hellip;"> <meta name="keywords" content="">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -117,144 +116,9 @@ text {
 
 </header>
 
-	<div id="content" class="inner"><div id ="placehold"><script src="/javascripts/home_node.js"></script></div>
-
-
-
-
-<article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2015/02/08/ubuntu-suspend-and-reboot-at-specific-times-using-cron/">
-		
-			Ubuntu: Suspend and Reboot at Specific Times Using Cron</a>
-	</h2>
-	<div class="entry-content">
-		<h1>Introduction</h1>
-
-<p>If you have a server at home and you want it to be on only during specific times and not 24/7, this script is for you.<br>
-Cron not only is the best tool for this, it also handles scheduled tasks. From the <a href="https://help.ubuntu.com/community/CronHowto">Ubuntu documentation</a>:</p>
-
-<blockquote>
-<p>Cron is a system daemon used to execute desired tasks (in the background) at designated times.</p>
-</blockquote>
-
-<h2>Method</h2>
-
-<ol>
-<li><p>First install Cron on Ubuntu if it is not already installed</p></li>
-<li><p>Create a new file, <em>suspend_until</em>, in your ~/Documents/ and place the following in it. This script is written by Romke van der Meulen.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">  #!/bin/bash
-
-  # Auto suspend and wake-up script
-  #
-  # Puts the computer on standby and automatically wakes it up at specified time
-  #
-  # Written by Romke van der Meulen &lt;redge.online@gmail.com&gt;
-  # Minor mods fossfreedom for AskUbuntu
-  #
-  # Takes a 24hour time HH:MM as its argument
-  # Example:
-  # suspend_until 9:30
-  # suspend_until 18:45
-
-  # ------------------------------------------------------
-  # Argument check
-  if [ $# -lt 1 ]; then
-  echo &quot;Usage: suspend_until HH:MM&quot;
-  exit
-  fi
-
-  # Check whether specified time today or tomorrow
-  DESIRED=$((`date +%s -d &quot;$1&quot;`))
-  NOW=$((`date +%s`))
-  if [ $DESIRED -lt $NOW ]; then
-  DESIRED=$((`date +%s -d &quot;$1&quot;` + 24*60*60))
-  fi
-
-  # Kill rtcwake if already running
-  sudo killall rtcwake
-
-  # Set RTC wakeup time
-  # N.B. change &quot;mem&quot; for the suspend option
-  # find this by &quot;man rtcwake&quot;
-  sudo rtcwake -a -m disk -t $DESIRED &amp;
-
-  # feedback
-  echo &quot;Suspending...&quot;
-
-  # give rtcwake some time to make its stuff
-  sleep 2
-
-  # then suspend
-  # N.B. dont usually require this bit
-  #sudo pm-suspend
-
-  # Any commands you want to launch after wakeup can be placed here
-  # Remember: sudo may have expired by now
-
-  # Wake up with monitor enabled N.B. change &quot;on&quot; for &quot;off&quot; if
-  # you want the monitor to be disabled on wake
-  xset dpms force on
-
-  # and a fresh console
-  clear
-  echo &quot;Good morning!&quot;
-</code></pre></div></li>
-<li><p>Change the permission of the file so that it is executable.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">  sudo chmod +x ~/Documents/suspend_until
-</code></pre></div></li>
-<li><p>Run crontab</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">  sudo crontab -e
-</code></pre></div></li>
-<li><p>Place the following line at the end of the file.</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">  00 02 * * * /home/user/Documents/suspend_until 09:00
-</code></pre></div>
-<p>This basically tells the server to execute the suspend script at <em>2:00 AM</em>. The <em>09:00</em> appended at the end of the line tells the server to wake up at <em>9:00 AM</em>. The details are all explained in the script.</p></li>
-<li><p>Save the crontab file and reboot.</p></li>
-</ol>
-
-		
-		
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-02-08T20:13:47+02:00" pubdate data-updated="true"></time></div>
-	
-
-<div class="tags">
-
-	<a class='category' href='/blog/categories/terminal/'>terminal</a>, <a class='category' href='/blog/categories/ubuntu/'>ubuntu</a>
-
-</div>
-
-
-	
-</div></article>
-
-
-<article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/2015/01/10/ubuntu-sharing-externally-connected-drives-over-network/">
-		
-			Ubuntu: Sharing Externally Connected Drives Over Network</a>
-	</h2>
-	<div class="entry-content">
-		<h1>Introduction</h1>
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">Ubuntu: Sharing Externally Connected Drives Over Network</h2>
+	<div class="entry-content"><h1>Introduction</h1>
 
 <p>When you have external drives connected to the server, it would be very useful if you can share these drives to users accessing the server as well.</p>
 
@@ -283,10 +147,7 @@ Cron not only is the best tool for this, it also handles scheduled tasks. From t
 </code></pre></div>
 <p>This gives permission, both read and write, to any user that accesses the drive. You can adjust this accordingly.</p></li>
 </ol>
-
-		
-		
-	</div>
+</div>
 
 
 <div class="meta">
@@ -315,12 +176,19 @@ Cron not only is the best tool for this, it also handles scheduled tasks. From t
 	
 </div></article>
 
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	
+	
+	<a class="addthis_button_tweet"></a>
+	
+	
+<!---	<a class="addthis_counter addthis_pill_style"></a> &#8212;>
+	</div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
 
-<nav id="pagenavi">
-    
-    
-    <div class="center"><a href="/archives">Blog Archives</a></div>
-</nav>
+
 </div>
 	<footer id="footer" class="inner">Copyright &copy; 2015
 
